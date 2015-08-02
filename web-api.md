@@ -77,26 +77,43 @@ http://bjtucit.sinaapp.com/api/服务名称.php
 
 ###6. getEventList
 ####名称：getEventList
-####功能：返回当前正在进行或即将开始的活动列表。包括活动名称、活动id、活动简介、活动图片。
+####功能：返回当前正在进行或即将开始的活动列表。包括活动名称、活动id、活动起止时间、活动举办单位、活动图片。
 ####参数：
 `offset`：数字类型 文章列表的偏移量，即已经获取过的活动的数量，API将从该offset开始获取之前的**10个**活动并返回。
 ####返回格式：
-
+```
+{"ids":["id1", "id2", ...],
+ "names":["name1", "name2", ...],
+ "start_times":["start_time1", "start_time2", ...],
+ "end_times":["end_time1", "end_time2", ...],
+ "sponsors":["sponsor1", "sponsor2", ...],
+ "images":["imageUrl1", "imageUrl2", ...]
+}
+```
 
 ###7. getEventDetail
 ####名称：getEventDetail
-####功能：
+####功能：返回活动详情信息的网页格式。
 ####参数：
 `id`：数字类型 活动的id
 ####返回格式：
-
+网页代码
 
 ###8. getHistoryEvent
 ####名称：getEventList
-####功能：返回当前已经结束的活动列表。包括活动名称、活动id、活动简介、活动图片。
+####功能：返回当前已经结束的活动列表。包括活动名称、活动id、活动起止时间、活动举办单位、活动图片。
 ####参数：
 `offset`：数字类型 文章列表的偏移量，即已经获取过的活动的数量，API将从该offset开始获取之前的**10个**活动并返回。
 ####返回格式：
+```
+{"ids":["id1", "id2", ...],
+ "names":["name1", "name2", ...],
+ "start_times":["start_time1", "start_time2", ...],
+ "end_times":["end_time1", "end_time2", ...],
+ "sponsors":["sponsor1", "sponsor2", ...],
+ "images":["imageUrl1", "imageUrl2", ...]
+}
+```
 
 ###9. joinEvent
 ####名称：joinEvent
